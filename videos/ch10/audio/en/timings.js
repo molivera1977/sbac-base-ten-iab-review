@@ -16,38 +16,38 @@ window.TIMINGS = {
   ]
  },
  "steps": {
-  "dur": 19.896,
+  "dur": 20.016,
   "marks": {
-   "s1": 6.499,
-   "tot": 8.899,
-   "f1": 11.059,
-   "f2": 13.175,
-   "same": 15.434
+   "s1": 6.47,
+   "tot": 8.871,
+   "f1": 11.03,
+   "f2": 13.147,
+   "same": 15.405
   },
   "cues": [
    [
     0.1,
-    "Which equation has the same unknown number as sixty-three divided by seven equals box?"
+    "Which equation has the same unknown number as sixty-three divided by seven equals blank?"
    ],
    [
-    6.499,
+    6.47,
     "Divide and times go together."
    ],
    [
-    8.899,
+    8.871,
     "Sixty-three is the total."
    ],
    [
-    11.059,
+    11.03,
     "Seven is one factor."
    ],
    [
-    13.175,
+    13.147,
     "The box is the other factor."
    ],
    [
-    15.434,
-    "Seven times box equals sixty-three asks the same thing."
+    15.405,
+    "Seven times blank equals sixty-three asks the same thing."
    ]
   ]
  },
@@ -69,10 +69,10 @@ window.TIMINGS = {
   ]
  },
  "mistake": {
-  "dur": 9.048,
+  "dur": 8.856,
   "marks": {
    "w": 1.328,
-   "alone": 6.229
+   "alone": 6.059
   },
   "cues": [
    [
@@ -81,20 +81,20 @@ window.TIMINGS = {
    ],
    [
     1.328,
-    "Sixty-three times seven equals box makes the box much too big."
+    "Sixty-three times seven equals blank makes the box much too big."
    ],
    [
-    6.229,
+    6.059,
     "The total stays alone on one side."
    ]
   ]
  },
  "wrap": {
-  "dur": 7.104,
+  "dur": 7.176,
   "marks": {
    "w1": 1.328,
    "w2": 2.763,
-   "end": 5.746
+   "end": 5.817
   },
   "cues": [
    [
@@ -107,10 +107,10 @@ window.TIMINGS = {
    ],
    [
     2.763,
-    "Factor times box equals the total."
+    "Factor times blank equals the total."
    ],
    [
-    5.746,
+    5.817,
     "Now you try."
    ]
   ]

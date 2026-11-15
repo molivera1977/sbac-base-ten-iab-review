@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Number and Operations in Base Ten · SBAC IAB Practice</title>
+  <title>SBAC Practice: Number and Operations in Base Ten</title>
   <!-- the tab icon (11/14): base-ten blocks (a hundreds flat, a tens rod, two ones) in the site's purple -->
   <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png?v=nbt1">
   <link rel="icon" type="image/svg+xml" href="icons/favicon.svg?v=nbt1">
@@ -20,8 +20,8 @@
      START SCREEN
 ══════════════════════════════════════════ -->
 <div class="container">
-  <h1>🧮 Number and Operations in Base Ten</h1>
-  <p class="welcome-sub">SBAC IAB Practice</p>
+  <h1>🧮 SBAC Practice: Number &amp; Operations in Base Ten</h1>
+  <p class="welcome-sub">Smarter Balanced IAB Practice · 4.NBT.2–4.NBT.6</p>
 
   <div id="start-screen">
 
@@ -47,7 +47,7 @@
         <li class="wp-step wp-s5"><span class="wp-n">3</span><span aria-hidden="true">📝</span> Test Form A</li>
         <li class="wp-step wp-s5"><span class="wp-n">4</span><span aria-hidden="true">📝</span> Test Form B</li>
       </ol>
-      <button class="lgs-btn" data-guest-start onclick="app.showReadAloudIntro()">🚀 Let's Get Started!</button>
+      <button class="lgs-btn" data-guest-key="Every question, the right answer and why. Printable." data-guest-start onclick="app.showReadAloudIntro()">🚀 Let's Get Started!</button>
       <div style="text-align:right;margin-top:10px;">
         <span onclick="app.promptTeacherReview()" style="font-size:12px;color:#767676;cursor:pointer;user-select:none;">Teacher Access</span>
       </div>
@@ -497,12 +497,13 @@
   <button type="button" id="teach-back" onclick="app.backToTeacher()">← Teacher screen</button>
 </div>
 
-<script src="share.js?v=5"></script>
+<script src="share.js?v=6"></script>
 <script src="form-label.js?v=nbt1"></script>
 <!-- the recorded voice (Module 4's: Ava): every line the site can say, made ahead by a harvest run of the site; kokoro-voice.js
-     plays them in place of the device voice. kokoro/lines.js is empty for now: the device voice reads everything. Before
-     next-waits.js, which listens to it. -->
-<script src="kokoro/lines.js?v=7bbcb801"></script>
+     plays them in place of the device voice (Marcos 11/14: "Yes, record Ava"). The list = site-tests nbt-kokoro.spec.js
+     (KOKORO_LIST), recorded by kokoro-voice/make_ava_kokoro.py; then tools/stamp.js. A line with no recording is said by
+     the device voice. Before next-waits.js, which listens to it. -->
+<script src="kokoro/lines.js?v=caf59828"></script>
 <script src="kokoro-voice.js?v=nbt1"></script>
 <script src="next-waits.js?v=nbt1" data-hold='#next-btn, #lc-next'></script>
 <!-- the questions (tools/SCHEMA.md): Warm-Up, Practice, Test Form A, Test Form B, and the Practice's "try one like it" -->
@@ -519,8 +520,8 @@
 <script src="spot-sync.js?v=nbt1"></script>
 <!-- 🎬 the lesson videos (Module 4's player): which video goes where (none yet: the Warm-Up's worked examples are read
      aloud instead), and the player. After kokoro-voice.js (video.js stops a video when the site speaks), before script.js. -->
-<script src="data/videos.js?v=f92237db"></script>
+<script src="data/videos.js?v=1dcad845"></script>
 <script src="video.js?v=nbt1"></script>
-<script src="script.js?v=nbt1"></script>
+<script src="script.js?v=nbt2"></script>
 </body>
 </html>

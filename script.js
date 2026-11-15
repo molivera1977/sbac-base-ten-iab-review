@@ -332,8 +332,8 @@ function convertToSpokenText(raw) {
     })
     .replace(/×/g, ' times ')
     .replace(/÷/g, ' divided by ')
-    .replace(/□(?=[?.!,;:])/g, ' box')                      // the box for the missing number (tools/SCHEMA.md): "= □?" is
-    .replace(/□/g, ' box ')                                  // "equals box?", never "equals box what?"; "61,4□8" is "61,4 box 8"
+    .replace(/□(?=[?.!,;:])/g, ' blank')                    // the box for the missing number is read "blank" (Marcos 11/14: "blank
+    .replace(/□/g, ' blank ')                                // everywhere"): "= □?" is "equals blank?", never "equals blank what?"; "61,4□8" is "61,4 blank 8"
     .replace(/(^|\s)>(?=\s|$)/g, '$1is greater than')
     .replace(/(^|\s)<(?=\s|$)/g, '$1is less than')
     .replace(/(^|\s)\+(?=\s|$)/g, '$1plus')
@@ -1375,8 +1375,8 @@ const app = {
     const kinds = { mc: 'multiple choice', entry: 'type a number', grid: 'True or False table', ms: 'select all that are true' };
     // the paper's own title (Marcos 11/4: "every print version should have a title"): Print hides the bar above,
     // so the printout says which part and version it is
-    const html = [`<div class="key-print-head"><h1>Number and Operations in Base Ten Answer Key — ${this._teachLabel(t.form, t.version)}</h1>` +
-      `<p>SBAC IAB Practice · Mr. O's 4th Grade · ${qs.length} questions</p></div>`,
+    const html = [`<div class="key-print-head"><h1>SBAC Practice: Base Ten Answer Key — ${this._teachLabel(t.form, t.version)}</h1>` +
+      `<p>Smarter Balanced IAB Practice · Number and Operations in Base Ten · Mr. O's 4th Grade · ${qs.length} questions</p></div>`,
       `<p class="key-note">Each child sees the choices (and the select-all options) in a shuffled order, so there are no letters here. The right answer has a ✅. True/False rows stay in this order.</p>`];
     qs.forEach((q, i) => {
       const pic = q.pic && !q.explain ? `<div class="key-pic">${M2V.picHTML(q.pic)}</div>` : '';   // the worked picture under Why shows the same model
@@ -2883,14 +2883,14 @@ const app = {
         </tr>`;
       })
     ).join('');
-    const html = `<html><head><title>Number and Operations in Base Ten (SBAC IAB Practice) Scores</title>
+    const html = `<html><head><title>Base Ten IAB Review Scores</title>
       <style>body{font-family:Arial;padding:20px;}h2{color:#5b3cc4;}
       table{width:100%;border-collapse:collapse;margin-top:12px;}
       th,td{border:1px solid #ccc;padding:8px 12px;text-align:center;}
       th{background:#5b3cc4;color:white;}
       .good{color:green;font-weight:bold;}.ok{color:orange;font-weight:bold;}.bad{color:red;font-weight:bold;}</style>
       </head><body>
-      <h2>🧮 Number and Operations in Base Ten · SBAC IAB Practice — Score Report</h2>
+      <h2>🧮 SBAC Practice — Number and Operations in Base Ten (IAB) — Score Report</h2>
       <p>Printed: ${new Date().toLocaleString()}</p>
       <table><tr><th>Name</th><th>Form</th><th>Attempt</th><th>Score</th><th>%</th><th>Time</th><th>Date</th></tr>${rows}</table>
       </body></html>`;

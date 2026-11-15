@@ -11,7 +11,7 @@
 <script src="../lib/engine.js?v=d6885892"></script>
 <script src="../lib/nbt.js?v=82e3c77d"></script>
 <script src="../lib/embed.js?v=3bc13d2d"></script>
-<script src="audio/en/timings.js?v=2695cbbc"></script>
+<script src="audio/en/timings.js?v=7c92b6e5"></script>
 <script>
 'use strict';
 /* Mr. O's 4th grade · SBAC Base Ten IAB · video 2: THE MISSING DIGIT, the IAB's typed kind ("74,171 < 74,1□0. What digit
@@ -57,12 +57,13 @@ const BEATS = [
 
   ['steps', 'Try a digit', (m) => {
     const p = panel(0);
-    // "Here is fifty-two thousand, six hundred forty-one, is greater than, fifty-two thousand, six hundred, box, eight."
+    // "Here is fifty-two thousand, six hundred forty-one, is greater than, fifty-two thousand, six hundred, blank, eight."
+    // (11/14: "box" → "blank", Marcos; re-timed to the new recording: each piece shows as Ava says it)
     const prob = S.prob = dLine(p, ['5', '2', ',', '6', '4', '1', ' > ', '5', '2', ',', '6', ' 0 ', '8'], PX, PY, .3, { size: PSZ, anchor: 'start' });
     put(prob.row[11], { o: 0 });                                               // the box's place
-    slot(prob, prob.row[11]._px, PY, m('q', -1.7), PSZ);                      // "box"
-    dLater(prob, [6], m('q', -5.9));                                           // "is greater than"
-    dLater(prob, [7, 8, 9, 10], m('q', -4.4));                                 // "fifty-two thousand, six hundred"
+    slot(prob, prob.row[11]._px, PY, m('q', -1.5), PSZ);                      // "blank"
+    dLater(prob, [6], m('q', -5.7));                                           // "is greater than"
+    dLater(prob, [7, 8, 9, 10], m('q', -4.2));                                 // "fifty-two thousand, six hundred"
     dLater(prob, [12], m('q', -.73));                                          // "eight"
     const card = dCard(p, PX - 52, PY - 112, prob.row.w + 104, 160, BLUE_BG, .3);
     p.insertBefore(card, p.firstChild);

@@ -9,7 +9,7 @@
    Only the videos that exist are listed (11 of 11).
 ═══════════════════════════════════════════════════════ */
 window.MM4_VIDEOS = {
-  version: 'df5e4596',     // goes on every video address: a new number when a video changes (Cloudflare keeps files 4 h)
+  version: '1b184cee',     // goes on every video address: a new number when a video changes (Cloudflare keeps files 4 h)
   titles: { 1: "Add big numbers", 2: "The missing digit", 3: "Which place tells", 4: "Same number, new look", 5: "Round", 6: "Area model", 7: "Partial products", 8: "Area model: two 2-digit numbers", 9: "Fix the claim", 10: "Divide and times go together", 11: "What can you buy?" },
   // the Warm-Up's 👀 Watch cards, by their title (the same in every version)
   watch: { "Add big numbers": 1, "Compare numbers": 3, "Same number, new look": 4, "Round": 5, "Area model": 6, "Partial products": 7, "Area model: two 2-digit numbers": 8, "Divide and multiply": 10, "What can you buy?": 11 },

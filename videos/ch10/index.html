@@ -11,7 +11,7 @@
 <script src="../lib/engine.js?v=d6885892"></script>
 <script src="../lib/nbt.js?v=82e3c77d"></script>
 <script src="../lib/embed.js?v=3bc13d2d"></script>
-<script src="audio/en/timings.js?v=6b16cf35"></script>
+<script src="audio/en/timings.js?v=6c6d1d6f"></script>
 <script>
 'use strict';
 /* Mr. O's 4th grade · SBAC Base Ten IAB · video 10: DIVIDE AND TIMES GO TOGETHER, the IAB's "same unknown number" kind
@@ -95,7 +95,7 @@ const BEATS = [
   ['mistake', 'Watch out', (m) => {
     const p = panel(0);
     dWatchOut(p, .3, 800, 110);
-    // "Sixty-three times seven equals box makes the box much too big."
+    // "Sixty-three times seven equals blank makes the box much too big." (11/14: "box" → "blank", Marcos)
     const bad = dMistake(p, [tot('63'), ' × ', fac('7'), ' = ', BOX], 800, 600, m('w'), null, { size: 100, strike: [0, 4], strikeAt: m('w', 4.1) });
     dLater(bad, [1, 2], m('w', .78)); dLater(bad, [3], m('w', 1.63));
     boxAt(bad, 4, m('w', 2.06), RED);
@@ -107,7 +107,7 @@ const BEATS = [
     put(r, { o: 0 }); show(r, m('alone', 1.02), .3);
   }, { minDur: 9.8 }],
 
-  ['wrap', 'Remember', rememberBeat([['Find the total.', 'w1'], ['Factor × box = the total.', 'w2']])],
+  ['wrap', 'Remember', rememberBeat([['Find the total.', 'w1'], ['Factor × blank = the total.', 'w2']])],
 ].map(([id, title, run, extra]) => ({ id, title, run, ...extra }));
 
 boot();

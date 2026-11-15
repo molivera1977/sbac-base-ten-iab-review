@@ -16,62 +16,62 @@ window.TIMINGS = {
   ]
  },
  "steps": {
-  "dur": 34.44,
+  "dur": 34.128,
   "marks": {
-   "q": 9.979,
-   "s1": 12.124,
-   "s2": 13.857,
-   "s3": 16.47,
-   "try4": 18.53,
-   "n4": 21.286,
-   "ones": 24.738,
-   "o": 26.215,
-   "g": 28.246,
-   "no": 32.749
+   "q": 9.666,
+   "s1": 11.811,
+   "s2": 13.544,
+   "s3": 16.158,
+   "try4": 18.218,
+   "n4": 20.973,
+   "ones": 24.425,
+   "o": 25.902,
+   "g": 27.934,
+   "no": 32.436
   },
   "cues": [
    [
     0.1,
-    "Here is fifty-two thousand, six hundred forty-one, is greater than, fifty-two thousand, six hundred, box, eight."
+    "Here is fifty-two thousand, six hundred forty-one, is greater than, fifty-two thousand, six hundred, blank, eight."
    ],
    [
-    9.979,
+    9.666,
     "What digit can go in the box?"
    ],
    [
-    12.124,
+    11.811,
     "Start at the left."
    ],
    [
-    13.857,
+    13.544,
     "The places match until the box."
    ],
    [
-    16.47,
+    16.158,
     "The box is in the tens."
    ],
    [
-    18.53,
+    18.218,
     "Try four, the same as the top."
    ],
    [
-    21.286,
+    20.973,
     "Fifty-two thousand, six hundred forty-eight."
    ],
    [
-    24.738,
+    24.425,
     "Look at the ones."
    ],
    [
-    26.215,
+    25.902,
     "Eight is more than one."
    ],
    [
-    28.246,
+    27.934,
     "So fifty-two thousand, six hundred forty-eight is greater."
    ],
    [
-    32.749,
+    32.436,
     "Four does not work!"
    ]
   ]
