@@ -2495,23 +2495,27 @@ const app = {
 
   /* After a miss on a part that teaches: the mistake named, then the right answer. Multiple choice and a typed number
      name it from `slips` (the general explanation is only the fallback for a pick with no note); a True/False table
-     says each wrong row's right answer and its why; select-all says each option the student got wrong and its why. */
+     says each wrong row's right answer, select-all each option the student got wrong — the first one with its why. */
   _missHTML(q, type, r) {
     const head = '❌ <strong>Not quite.</strong>';
     const note = html => ` <span class="slip-note">${html}</span>`;
+    // A table or a select-all: only the FIRST wrong row / option (screen order) is explained; the rest are named right or
+    // not (Marcos 11/15: "shorten long feedback" → "Explain one, name the rest" — a miss on every option ran 87 s). The
+    // ✅ / ❌ marks on the screen still show every one.
+    const why = (k, text) => k === 0 && text ? ' ' + formatMathText(text) : '';
     if (type === 'grid') {
       const some = r.wrongRows.length < q.rows.length ? ' Every row must be right.' : '';
-      const notes = r.wrongRows.map(i => {
+      const notes = r.wrongRows.map((i, k) => {
         const row = q.rows[i];
-        return note(`“${formatMathText(row.text)}” is <strong>${formatMathText(row.answer)}.</strong>${row.why ? ' ' + formatMathText(row.why) : ''}`);
+        return note(`“${formatMathText(row.text)}” is <strong>${formatMathText(row.answer)}.</strong>${why(k, row.why)}`);
       }).join('');
-      const noWhy = r.wrongRows.some(i => !q.rows[i].why);
+      const noWhy = r.wrongRows.length > 0 && !q.rows[r.wrongRows[0]].why;
       return `${head}${some}${notes}${noWhy && q.explanation ? `<br>${formatMathText(q.explanation)}` : ''}`;
     }
     if (type === 'ms') {
-      const notes = r.wrongOpts.map(o =>
-        note(`“${formatMathText(o.text)}” is <strong>${o.right ? 'true.' : 'not true.'}</strong>${o.why ? ' ' + formatMathText(o.why) : ''}`)).join('');
-      const noWhy = r.wrongOpts.some(o => !o.why);
+      const notes = r.wrongOpts.map((o, k) =>
+        note(`“${formatMathText(o.text)}” is <strong>${o.right ? 'true.' : 'not true.'}</strong>${why(k, o.why)}`)).join('');
+      const noWhy = r.wrongOpts.length > 0 && !r.wrongOpts[0].why;
       return `${head} Pick every true one.${notes}${noWhy && q.explanation ? `<br>${formatMathText(q.explanation)}` : ''}`;
     }
     const slip = q.slips ? q.slips[type === 'entry' ? r.norm : r.pick] : null;
