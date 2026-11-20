@@ -2346,6 +2346,10 @@ const app = {
       this.lastMissed = true;
       this.missedQuestions.push(...this._missEntries(q, type, r));
     }
+    // 📍 Right Now on the dashboard (Marcos 11/20: "Yes, add both" — Module 4 and Base Ten, like Module 5): every scored
+    // answer rides in the log, right or missed, so the teacher sees a ✓ / ✗ box per question while the student works.
+    // One try per question; steps and "try one like it" log their own kinds above.
+    if (!isStep && !isTwin) logEvent('answer', { id: q.id, ok: correct });
 
     // The Warm-Up and the Practice teach: each row / option / choice marked right or wrong, the right one shown, the
     // mistake named, why. The tests: right or wrong only — the student's own number or choice is marked, a True/False
